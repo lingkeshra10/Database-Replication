@@ -7,6 +7,7 @@ Master-Master Replication
 Master-Master Replication or Galera Cluster is a synchronus multi-master database cluster, based on synchronus replication and MySQL and InnoDB. When the Master-Master replication have apply in the database, any node can perform both write and read in the replication cluster.
 
 Pros and Cons
+
 Pros
 - Application can read and write from both Master Database.
 - Simple configuration in order to setup master-master database replication
@@ -20,6 +21,7 @@ Master-Slave Replication
 Master-Slave Replication involves in caching data from the master database to slave database. This replication process will replicate the copies from the parents database to multiple server simultaneously.
 
 Pros and Cons
+
 Pros
 - Retrieve the data from the master without affecting the performance of the application.
 - Backup entire database from the master to slave database without having any impact to the master.
