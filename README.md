@@ -5,8 +5,6 @@ For the Maria Database there is two type of replication can be done one is Maste
 
 Master-Master Replication
 
-<u>this is underlined text in HTML or markdown, which accepts HTML</u>
-
 Master-Master Replication or Galera Cluster is a synchronus multi-master database cluster, based on synchronus replication and MySQL and InnoDB. When the Master-Master replication have apply in the database, any node can perform both write and read in the replication cluster.
 
 Pros and Cons
@@ -21,6 +19,7 @@ Cons
 - If the application having high load, then the replication between master-master database will drag the read and write of database to slower.
 
 Master-Slave Replication
+
 Master-Slave Replication involves in caching data from the master database to slave database. This replication process will replicate the copies from the parents database to multiple server simultaneously.
 
 Pros and Cons
