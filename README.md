@@ -14,6 +14,7 @@ Pros
 
 Cons
 - Loosely consistent
+- If the application having high load, then the replication between master-master database will drag the read and write of database to slower.
 
 Master-Slave Replication
 Master-Slave Replication involves in caching data from the master database to slave database. This replication process will replicate the copies from the parents database to multiple server simultaneously.
