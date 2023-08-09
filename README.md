@@ -1,4 +1,4 @@
-# Maria DB Replication
+# Database Replication
 Database replication is the process of creating and maintaining multiple copies of a database, either on the same server or on different servers, to ensure that the data is consistent and available to users at all times.
 
 In a replicated database, changes made to the original database are automatically propagated to the replicated copies. This allows multiple users to access and work with the same data simultaneously, even if they are located in different locations.
