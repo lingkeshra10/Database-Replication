@@ -1,36 +1,39 @@
-# Database-Replication
-This is guide for Database Replication in Maria Database, that can be done with the steps and FAQ
+# Maria DB Replication
+Database replication is the process of creating and maintaining multiple copies of a database, either on the same server or on different servers, to ensure that the data is consistent and available to users at all times.
 
-For the Maria Database there is two type of replication can be done one is Master-Master replication also known as Galera Cluster and another is Master-Slave Replication.
+In a replicated database, changes made to the original database are automatically propagated to the replicated copies. This allows multiple users to access and work with the same data simultaneously, even if they are located in different locations.
 
-Master-Master Replication
+Replication can be done in a variety of ways, depending on the specific needs of the organization. Some common types of replication include:
 
-Master-Master Replication or Galera Cluster is a synchronus multi-master database cluster, based on synchronus replication and MySQL and InnoDB. When the Master-Master replication have apply in the database, any node can perform both write and read in the replication cluster.
 
-Pros and Cons
+## Master-Master Replication
 
-Pros
+Master-Master Replication or Galera Cluster is a synchronous multi-master database cluster, based on synchronous replication and MySQL and InnoDB. When the Master-Master replication has applied in the database, any node can perform both write and read in the replication cluster.
+
+### Pros and Cons
+
+#### Pros
 - Application can read and write from both Master Database.
-- Simple configuration in order to setup master-master database replication
+- Simple configuration in order to set up master-master database replication
 - Simple, easy and quick failover
 
-Cons
+#### Cons
 - Loosely consistent
-- If the application having high load, then the replication between master-master database will drag the read and write of database to slower.
+- If the application has a high load, then the replication between the master-master database will drag the read and write of the database slower.
 
-Master-Slave Replication
+## Master-Slave Replication
 
-Master-Slave Replication involves in caching data from the master database to slave database. This replication process will replicate the copies from the parents database to multiple server simultaneously.
+Master-Slave Replication involves caching data from the master database to the slave database. This replication process will replicate the copies from the parent database to multiple servers simultaneously.
 
-Pros and Cons
+### Pros and Cons
 
-Pros
+#### Pros
 - Retrieve the data from the master without affecting the performance of the application.
-- Backup entire database from the master to slave database without having any impact to the master.
-- Slaves can be taken offline and can be sync back to the master without having offline for period time.
+- Back up the entire database from the master to the slave database without having any impact on the master.
+- Slaves can be taken offline and can be synced back to the master without having offline for a period of time.
 
-Cons
-- If the master database have huge gap of the data that didnt send to slave, the replication between master and slave will be cut off.
-- If the master is down, slave should be promoted to be the master manually. There is no automatic failover between master and slave.
-- In master-slave design, the write should go to the master and not the slave. Or not the master-slave replication will be down.
+#### Cons
+- If the master database has a huge gap in the data that didn't send to the slave, the replication between master and slave will be cut off.
+- If the master is down, the slave should be promoted to be the master manually. There is no automatic failover between master and slave.
+- In master-slave design, the writer should go to the master and not the slave. Or not the master-slave replication will be down.
 
